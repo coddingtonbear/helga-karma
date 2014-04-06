@@ -160,7 +160,7 @@ class KarmaRecord(object):
         if maximum_karma == 0:
             return 0
 
-        if getattr(settings, 'KARMA_SCALE_LINEAR'):
+        if getattr(settings, 'KARMA_SCALE_LINEAR', False):
             # Linearly scale karma
             percentage = my_karma / maximum_karma
         else:
